@@ -20,8 +20,10 @@ html,body,ul,li{ padding:0; margin:0; list-style-type: none;}
 		li{
 			float: left;
 			box-sizing: border-box;
+			height: 344px;
 			.words{
 				display: inline-block;
+				line-height: 24px;
 			}
 		}
 		.personPic{
@@ -35,8 +37,30 @@ html,body,ul,li{ padding:0; margin:0; list-style-type: none;}
 			padding-top: 80px;
 			padding: 62px 30px 0;
 			.words{
-				font-size: 18px;
+				font-size: 16px;
 				color: #FFF;
+				margin:0;
+				overflow: hidden;
+				height: 72px;
+				margin-bottom: 8px;
+			}
+			.wordsShow{
+				height: auto;
+			}
+			.showMore{
+				background: url("../images/arrow_down.png") left center no-repeat;
+				background-size: 100%;
+				color: #FFF;
+				display: inline-block;
+				float: right;
+				font-size: 16px;
+				cursor: pointer;
+				height: 18px;
+				width: 87px;
+			}
+			.hide{
+				background: url("../images/arrow_up.png") left center no-repeat;
+				background-size: 100%;
 			}
 		}
 		.wordsInfo_l{
@@ -52,3 +76,162 @@ html,body,ul,li{ padding:0; margin:0; list-style-type: none;}
 		}
 	}
 }
+
+.motorcadeInfo{
+	background-color: #1c1c1c;
+	padding:42px 0 72px;
+	.List{
+		width: 1000px;
+		margin:0 auto;
+		li{
+			float: left;
+			display: inline-block;
+			width: 43%;
+			position: relative;
+			img{
+				width: 100%;
+			}
+			.link{
+				background: url("../images/infoBg.png") left top repeat-x;
+				padding: 25px 60px 56px 30px;
+				box-sizing: border-box;
+				position: absolute;
+				bottom: -33px;
+				right: -55px;
+				min-width: 242px;
+				max-width: 360px;
+				.name{
+					color: #FFF;
+					font-size: 36px;
+					font-weight: normal;
+					margin:0;
+					padding-bottom: 5px;
+					box-sizing: border-box;
+				}
+				a{
+					color: #FFF;
+					font-size: 16px;
+				}
+			}
+		}
+		li.infoEpsonPic{
+			.link{
+				left:-55px;
+			}
+		}
+		li.space{
+			width: 14%;
+		}
+	}
+}
+
+.macthPic{
+	padding:150px 0 0;
+	background: url("../images/matchPicBg_pc.jpg") left top no-repeat;
+	background-size: 100% 100%;
+	.macthPicList{
+		width: 1000px;
+		margin:0 auto;
+		li{
+			float: left;
+			width: 16.8%;
+			padding-left: 1%;
+			padding-bottom: 1%;
+			position: relative;
+			img{
+				width: 100%;
+				display: block;
+			}
+			
+			.smGlass{
+				position: absolute;
+				bottom: 10px;
+				right: 0;
+				width: 40px;
+			}
+			.shadow{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.6);
+				left: 0;
+				top: 0;
+				text-align: center;
+				img{
+					width: 50%;
+					margin-left: 25%;
+					margin-top: 45%;
+				}
+			}
+			.hidden{
+				display: none;
+			}
+			&:first-child{
+				padding-left: 0;
+				padding-bottom: 0;
+			}
+		}
+		li.big{
+			width: 46.6%;
+			.smGlass{
+				bottom:0;
+			}
+			.shadow{
+				img{
+					margin-top: 32%;
+				}
+			}
+			
+		}
+	}
+	.macthPicList.hide{
+		display: none;
+	}
+}
+
+/* isshowcase */
+div#isshowcase{
+    position:fixed;
+    display:block;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.75) ;
+    z-index: 100;
+}
+div#isshowcase div#issheet {
+    position: absolute;
+    width: 510px;
+    height: 498px;
+    left: 50%;
+    margin-left: -255px;
+    top: 50%;
+    margin-top: -249px;
+    padding: 16px;
+    background: #FFFFFF;
+    opacity: 0;
+    z-index: 1000;
+    -webkit-box-shadow: 0 4px 32px 4px #fff;
+    -moz-box-shadow: 0 4px 32px 4px #fff;
+    box-shadow: 0 0px 32px 4px #000;
+}
+div#isshowcase div#issheet div#ismovie {
+    width: 510px;
+    height: 498px;
+    background-color: #000;
+}
+/***********视频关闭按钮****************/
+div#isshowcase div#issheet div#isclose{
+	position: absolute;
+	top: 0;
+	right: -60px;
+	width: 50px;
+	cursor: pointer;
+	background: #FFF;
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;
+	text-align: center;
+}
+/* end edit */

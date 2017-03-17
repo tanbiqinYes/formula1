@@ -34,9 +34,11 @@ li {
 .sendWord .List li {
   float: left;
   box-sizing: border-box;
+  height: 344px;
 }
 .sendWord .List li .words {
   display: inline-block;
+  line-height: 24px;
 }
 .sendWord .List .personPic {
   width: 20%;
@@ -50,8 +52,30 @@ li {
   padding: 62px 30px 0;
 }
 .sendWord .List .wordsInfo .words {
-  font-size: 18px;
+  font-size: 16px;
   color: #FFF;
+  margin: 0;
+  overflow: hidden;
+  height: 72px;
+  margin-bottom: 8px;
+}
+.sendWord .List .wordsInfo .wordsShow {
+  height: auto;
+}
+.sendWord .List .wordsInfo .showMore {
+  background: url("../images/arrow_down.png") left center no-repeat;
+  background-size: 100%;
+  color: #FFF;
+  display: inline-block;
+  float: right;
+  font-size: 16px;
+  cursor: pointer;
+  height: 18px;
+  width: 87px;
+}
+.sendWord .List .wordsInfo .hide {
+  background: url("../images/arrow_up.png") left center no-repeat;
+  background-size: 100%;
 }
 .sendWord .List .wordsInfo_l {
   background: url("../images/sendWordShadow_l.png") left top no-repeat;
@@ -64,3 +88,153 @@ li {
 .sendWord .List .space {
   width: 3%;
 }
+.motorcadeInfo {
+  background-color: #1c1c1c;
+  padding: 42px 0 72px;
+}
+.motorcadeInfo .List {
+  width: 1000px;
+  margin: 0 auto;
+}
+.motorcadeInfo .List li {
+  float: left;
+  display: inline-block;
+  width: 43%;
+  position: relative;
+}
+.motorcadeInfo .List li img {
+  width: 100%;
+}
+.motorcadeInfo .List li .link {
+  background: url("../images/infoBg.png") left top repeat-x;
+  padding: 25px 60px 56px 30px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: -33px;
+  right: -55px;
+  min-width: 242px;
+  max-width: 360px;
+}
+.motorcadeInfo .List li .link .name {
+  color: #FFF;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+}
+.motorcadeInfo .List li .link a {
+  color: #FFF;
+  font-size: 16px;
+}
+.motorcadeInfo .List li.infoEpsonPic .link {
+  left: -55px;
+}
+.motorcadeInfo .List li.space {
+  width: 14%;
+}
+.macthPic {
+  padding: 150px 0 0;
+  background: url("../images/matchPicBg_pc.jpg") left top no-repeat;
+  background-size: 100% 100%;
+}
+.macthPic .macthPicList {
+  width: 1000px;
+  margin: 0 auto;
+}
+.macthPic .macthPicList li {
+  float: left;
+  width: 16.8%;
+  padding-left: 1%;
+  padding-bottom: 1%;
+  position: relative;
+}
+.macthPic .macthPicList li img {
+  width: 100%;
+  display: block;
+}
+.macthPic .macthPicList li .smGlass {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  width: 40px;
+}
+.macthPic .macthPicList li .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+.macthPic .macthPicList li .shadow img {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 45%;
+}
+.macthPic .macthPicList li .hidden {
+  display: none;
+}
+.macthPic .macthPicList li:first-child {
+  padding-left: 0;
+  padding-bottom: 0;
+}
+.macthPic .macthPicList li.big {
+  width: 46.6%;
+}
+.macthPic .macthPicList li.big .smGlass {
+  bottom: 0;
+}
+.macthPic .macthPicList li.big .shadow img {
+  margin-top: 32%;
+}
+.macthPic .macthPicList.hide {
+  display: none;
+}
+/* isshowcase */
+div#isshowcase {
+  position: fixed;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+}
+div#isshowcase div#issheet {
+  position: absolute;
+  width: 510px;
+  height: 498px;
+  left: 50%;
+  margin-left: -255px;
+  top: 50%;
+  margin-top: -249px;
+  padding: 16px;
+  background: #FFFFFF;
+  opacity: 0;
+  z-index: 1000;
+  -webkit-box-shadow: 0 4px 32px 4px #fff;
+  -moz-box-shadow: 0 4px 32px 4px #fff;
+  box-shadow: 0 0px 32px 4px #000;
+}
+div#isshowcase div#issheet div#ismovie {
+  width: 510px;
+  height: 498px;
+  background-color: #000;
+}
+/***********视频关闭按钮****************/
+div#isshowcase div#issheet div#isclose {
+  position: absolute;
+  top: 0;
+  right: -60px;
+  width: 50px;
+  cursor: pointer;
+  background: #FFF;
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+  text-align: center;
+}
+/* end edit */
